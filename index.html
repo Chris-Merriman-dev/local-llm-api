@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel AI Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>SENTINEL CORE</h1>
+        </header>
+
+        <div class="status-bar">
+            <span class="status-label">LINK STATUS:</span>
+            <span id="connection-status" class="status-indicator offline">OFFLINE</span>
+        </div>
+
+        <div id="chat-display" class="chat-display">
+            </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Enter command..." autocomplete="off">
+            <button id="send-btn">EXECUTE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
