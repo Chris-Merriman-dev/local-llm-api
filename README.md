@@ -16,6 +16,8 @@ A high-performance, responsive web interface for interacting with local Large La
 
 * **backend/** — FastAPI server and LLM logic
   * `main.py`
+  * `model_used.py`
+  * `SentinalAI.py`
   * `requirements.txt`
 * **frontend/** — UI components
   * `index.html`
