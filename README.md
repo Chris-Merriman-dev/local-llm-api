@@ -14,15 +14,14 @@ A high-performance, responsive web interface for interacting with local Large La
 
 ## 📂 Project Structure
 
-.
-├── backend/            # FastAPI server and LLM logic
-│   ├── main.py
-│   └── requirements.txt
-├── frontend/           # UI components
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-└── .gitignore          # Professional hygiene file
+* **backend/** — FastAPI server and LLM logic
+  * `main.py`
+  * `requirements.txt`
+* **frontend/** — UI components
+  * `index.html`
+  * `style.css`
+  * `script.js`
+* `.gitignore` — Professional hygiene file
 
 ## 📄 License
 
