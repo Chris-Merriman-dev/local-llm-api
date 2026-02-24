@@ -5,6 +5,14 @@ Date : 2/2026
 Purpose : To architect a scalable client-server interface that bridges a Python-based backend with a responsive web frontend, enabling secure, 
 low-latency communication with a locally hosted Large Language Model (LLM).
 
+Files needed : 
+main.py (this file)
+model_used.py
+SentinalAI.py
+index.html
+styles.css
+script.js
+
 '''
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
