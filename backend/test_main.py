@@ -12,13 +12,25 @@ def test_get_history_endpoint():
     assert "history" in response.json()
 
 def test_stats_endpoint():
-    """Verify system stats are reporting correctly"""
+    """Verify all 7 system metrics are reporting correctly"""
     response = client.get("/stats")
     assert response.status_code == 200
     data = response.json()
-    assert "cpu" in data
-    assert "ram" in data
+
+    # 1. Verify all expected keys exist in the response
+    expected_keys = ["cpu", "ram", "disk", "net_down", "net_up", "processes", "uptime"]
+    for key in expected_keys:
+        assert key in data
+
+    # 2. Logic/Sanity Checks
     assert data["uptime"] > 0
+    assert data["processes"] > 0  # There should always be at least one process running (the server itself!)
+    
+    # 3. Percentage Checks (Optional but smart)
+    # CPU, RAM, and Disk should be between 0 and 100
+    assert 0 <= data["cpu"] <= 100
+    assert 0 <= data["ram"] <= 100
+    assert 0 <= data["disk"] <= 100
 
 def test_ask_sentinel_endpoint_mocked():
     """Verify API logic without needing a local Ollama instance"""
