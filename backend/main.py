@@ -74,7 +74,7 @@ async def ask_sentinel(session: ChatSession):
     # Remove it temporarily because your class function appends it again
     history.pop()
 
-    sys_info = "You are a tactical terminal for a BAE engineer."
+    sys_info = "You are a tactical terminal for a Systems Engineer."
 
     # Call your Ask_Model class
     reply, updated_history = model_engine.ask_model_with_chat_history(
