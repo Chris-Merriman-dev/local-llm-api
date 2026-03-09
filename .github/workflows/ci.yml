@@ -37,8 +37,8 @@ jobs:
         pytest
 
     - name: Lint code
-      run: flake8 ./backend
+      run: flake8 .
 
     - name: Format code
-      #run: black ./backend --check
-      run: black ./backend
+      #run: black . --check
+      run: black .
